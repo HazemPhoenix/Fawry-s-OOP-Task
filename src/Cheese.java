@@ -1,7 +1,7 @@
 import java.time.LocalDate;
 
 public abstract class Cheese extends ExpirableProduct implements Shippable {
-    private float weight;
+    private double weight;
     private String type;
 
     protected Cheese(String name, double price, int quantity, Manufacturer manufacturer, LocalDate expiryDate, Boolean isExpired, float weight, String type) {
@@ -10,7 +10,7 @@ public abstract class Cheese extends ExpirableProduct implements Shippable {
         this.type = type;
     }
 
-    public float getWeight() {
+    public double getWeight() {
         return weight;
     }
 

@@ -1,6 +1,6 @@
 public class TV extends Product implements Shippable {
     private float screenSizeInInches;
-    private float weight;
+    private double weight;
 
     public TV(String name, double price, int quantity, Manufacturer manufacturer, float screenSizeInInches, float weight) {
         super(name, price, quantity, manufacturer);
@@ -16,7 +16,7 @@ public class TV extends Product implements Shippable {
         this.screenSizeInInches = screenSizeInInches;
     }
 
-    public float getWeight() {
+    public double getWeight() {
         return weight;
     }
 
