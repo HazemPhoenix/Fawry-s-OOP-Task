@@ -104,5 +104,19 @@ public class EcommerceTester {
 
         System.out.println("---------------");
 
+        MobilePhone mobilePhone = new MobilePhone("Samsung Galaxy S25 Ultra AI Phone, 256GB Storage, 12GB RAM", 59700d, 1, samsung, 6.9f, 12, 256, 12f, 200f);
+        System.out.println(mobilePhone.getName());
+        System.out.println(mobilePhone.getPrice());
+        System.out.println(mobilePhone.getQuantity());
+        System.out.println(mobilePhone.getManufacturer().getName());
+        System.out.println(mobilePhone.getScreenSizeInInches());
+        System.out.println(mobilePhone.getRAM() + "GB");
+        System.out.println(mobilePhone.getStorageInGB() + "GB");
+        System.out.println(mobilePhone.getFrontCameraQualityInMegaPixels() + " Megapixels");
+        System.out.println(mobilePhone.getBackCameraQualityInMegaPixels() + " Megapixels");
+
+        System.out.println("---------------");
+
+
     }
 }
