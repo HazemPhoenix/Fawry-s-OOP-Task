@@ -40,6 +40,7 @@ public class Main {
         System.out.println(creamCheese.getName());
         System.out.println(creamCheese.getPrice());
         System.out.println(creamCheese.getQuantity());
+        System.out.println(creamCheese.getType());
         System.out.println(creamCheese.getManufacturer().getName());
         System.out.println(creamCheese.getExpiryDate());
         System.out.println(creamCheese.getIsExpired());
@@ -50,9 +51,21 @@ public class Main {
         System.out.println(cheddarCheese.getName());
         System.out.println(cheddarCheese.getPrice());
         System.out.println(cheddarCheese.getQuantity());
+        System.out.println(cheddarCheese.getType());
         System.out.println(cheddarCheese.getManufacturer().getName());
         System.out.println(cheddarCheese.getExpiryDate());
         System.out.println(cheddarCheese.getIsExpired());
+
+        System.out.println("---------------");
+
+        Cheese blueCheese = new BlueCheese("Dina Farms Blue Cheese", 100, 2, dinaFarms, futureDate, false, 0.275f);
+        System.out.println(blueCheese.getName());
+        System.out.println(blueCheese.getPrice());
+        System.out.println(blueCheese.getQuantity());
+        System.out.println(blueCheese.getType());
+        System.out.println(blueCheese.getManufacturer().getName());
+        System.out.println(blueCheese.getExpiryDate());
+        System.out.println(blueCheese.getIsExpired());
 
         System.out.println("---------------");
 
