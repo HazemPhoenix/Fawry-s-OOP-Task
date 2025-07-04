@@ -4,7 +4,7 @@ public abstract class Product {
     private int quantity;
     private Manufacturer manufacturer;
 
-    public Product(String name, double price, int quantity, Manufacturer manufacturer) {
+    protected Product(String name, double price, int quantity, Manufacturer manufacturer) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;

@@ -3,7 +3,7 @@ public class Manufacturer {
     private String address;
     private Sector sector;
 
-    Manufacturer(String name, String address, Sector sector) {
+    public Manufacturer(String name, String address, Sector sector) {
         this.name = name;
         this.address = address;
         this.sector = sector;
