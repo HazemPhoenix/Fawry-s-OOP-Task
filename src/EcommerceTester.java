@@ -1,9 +1,8 @@
 import java.time.LocalDate;
-import java.util.Date;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
+public class EcommerceTester {
     public static void main(String[] args) {
         BiscuitFlavor bf = BiscuitFlavor.Chocolate;
         BiscuitFlavor bf2 = BiscuitFlavor.Vanilla;
@@ -14,18 +13,19 @@ public class Main {
 
         System.out.println("---------------");
 
-        Manufacturer m = new Manufacturer("Samsung", "Suwon-si, South Korea", Sector.Technology);
-        System.out.println(m.getAddress());
-        System.out.println(m.getName());
-        System.out.println(m.getSector());
-        m.setAddress("Cairo, Egypt");
-        System.out.println(m.getAddress());
+        Manufacturer samsung = new Manufacturer("Samsung", "Suwon-si, South Korea", Sector.Technology);
+        System.out.println(samsung.getAddress());
+        System.out.println(samsung.getName());
+        System.out.println(samsung.getSector());
+        samsung.setAddress("Cairo, Egypt");
+        System.out.println(samsung.getAddress());
+        samsung.setAddress("Suwon-si, South Korea");
 
         System.out.println("---------------");
 
-        Manufacturer m2 = new Manufacturer("Mondelez", "10th of Ramadan", Sector.Food);
+        Manufacturer mondelez = new Manufacturer("Mondelez", "10th of Ramadan", Sector.Food);
         LocalDate futureDate = LocalDate.now().plusMonths(1);
-        Biscuit b = new Biscuit("Oreo Biscuit 12 pieces", 85, 3, m2, futureDate, false, BiscuitFlavor.Vanilla);
+        Biscuit b = new Biscuit("Oreo Biscuit 12 pieces", 85, 3, mondelez, futureDate, false, BiscuitFlavor.Vanilla);
         System.out.println(b.getName());
         System.out.println(b.getPrice());
         System.out.println(b.getQuantity());
@@ -91,6 +91,16 @@ public class Main {
         sc.use();
         System.out.println(sc.getIsUsed());
 
+
+        System.out.println("---------------");
+
+        TV tv = new TV("Samsung 43 Inch TV Crystal Processor 4K LED", 14000d, 1,samsung, 43f, 8.1f);
+        System.out.println(tv.getName());
+        System.out.println(tv.getPrice());
+        System.out.println(tv.getQuantity());
+        System.out.println(tv.getManufacturer().getName());
+        System.out.println(tv.getScreenSizeInInches());
+        System.out.println(tv.getWeight());
 
         System.out.println("---------------");
 
