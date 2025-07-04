@@ -80,5 +80,19 @@ public class Main {
 
         System.out.println("---------------");
 
+        Manufacturer vodafone = new Manufacturer("Vodafone", "Smart Village, Giza", Sector.Technology);
+        MobileScratchCard sc = new MobileScratchCard("Fakka Card", 26, 2, vodafone, false, 0.75f);
+        System.out.println(sc.getName());
+        System.out.println(sc.getPrice());
+        System.out.println(sc.getQuantity());
+        System.out.println(sc.getManufacturer().getName());
+        System.out.println(sc.getCapacityInGB() + "GB");
+        System.out.println(sc.getIsUsed());
+        sc.use();
+        System.out.println(sc.getIsUsed());
+
+
+        System.out.println("---------------");
+
     }
 }
