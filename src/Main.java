@@ -33,6 +33,16 @@ public class Main {
         System.out.println(b.getIsExpired());
         System.out.println(b.getFlavor());
 
+        System.out.println("---------------");
+
+        Manufacturer dinaFarms = new Manufacturer("Dina Farms", "Cairo-Alexandia desert road", Sector.Food);
+        Cheese creamCheese = new CreamCheese("Dina Farms Cream Cheese Spread", 93, 40, dinaFarms, futureDate, false, 0.275f);
+        System.out.println(creamCheese.getName());
+        System.out.println(creamCheese.getPrice());
+        System.out.println(creamCheese.getQuantity());
+        System.out.println(creamCheese.getManufacturer().getName());
+        System.out.println(creamCheese.getExpiryDate());
+        System.out.println(creamCheese.getIsExpired());
 
         System.out.println("---------------");
 
