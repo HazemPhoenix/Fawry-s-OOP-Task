@@ -25,7 +25,7 @@ public class Main {
 
         Manufacturer m2 = new Manufacturer("Mondelez", "10th of Ramadan", Sector.Food);
         LocalDate futureDate = LocalDate.now().plusMonths(1);
-        Biscuit b = new Biscuit("Oreo Biscuit 12 pieces", 85, 50, m2, futureDate, false, BiscuitFlavor.Vanilla);
+        Biscuit b = new Biscuit("Oreo Biscuit 12 pieces", 85, 3, m2, futureDate, false, BiscuitFlavor.Vanilla);
         System.out.println(b.getName());
         System.out.println(b.getPrice());
         System.out.println(b.getQuantity());
@@ -36,7 +36,7 @@ public class Main {
         System.out.println("---------------");
 
         Manufacturer dinaFarms = new Manufacturer("Dina Farms", "Cairo-Alexandia desert road", Sector.Food);
-        Cheese creamCheese = new CreamCheese("Dina Farms Cream Cheese Spread", 93, 40, dinaFarms, futureDate, false, 0.275f);
+        Cheese creamCheese = new CreamCheese("Dina Farms Cream Cheese Spread", 93, 2, dinaFarms, futureDate, false, 0.275f);
         System.out.println(creamCheese.getName());
         System.out.println(creamCheese.getPrice());
         System.out.println(creamCheese.getQuantity());
@@ -46,6 +46,15 @@ public class Main {
 
         System.out.println("---------------");
 
+        Cheese cheddarCheese = new CheddarCheese("Dina Farms Cheddar Cheese Spread", 84, 5, dinaFarms, futureDate, false, 0.275f);
+        System.out.println(cheddarCheese.getName());
+        System.out.println(cheddarCheese.getPrice());
+        System.out.println(cheddarCheese.getQuantity());
+        System.out.println(cheddarCheese.getManufacturer().getName());
+        System.out.println(cheddarCheese.getExpiryDate());
+        System.out.println(cheddarCheese.getIsExpired());
+
+        System.out.println("---------------");
 
     }
 }
