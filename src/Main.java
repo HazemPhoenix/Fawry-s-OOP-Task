@@ -69,5 +69,16 @@ public class Main {
 
         System.out.println("---------------");
 
+        Cheese mozzarellaCheese = new MozzarellaCheese("Dina Farms Mozzarella Cheese", 120, 1, dinaFarms, futureDate, false, 0.275f);
+        System.out.println(mozzarellaCheese.getName());
+        System.out.println(mozzarellaCheese.getPrice());
+        System.out.println(mozzarellaCheese.getQuantity());
+        System.out.println(mozzarellaCheese.getType());
+        System.out.println(mozzarellaCheese.getManufacturer().getName());
+        System.out.println(mozzarellaCheese.getExpiryDate());
+        System.out.println(mozzarellaCheese.getIsExpired());
+
+        System.out.println("---------------");
+
     }
 }
