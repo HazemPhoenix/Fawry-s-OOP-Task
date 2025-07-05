@@ -1,5 +1,5 @@
 # My Submission for the Fawry Full-Stack development OOP Task
-[Excalidraw Board]([https://link-url-here.org](https://excalidraw.com/#json=hl7VSSElw_PHNQf9ZDzVP,vJwRB0rMn8QwcV8xCZvGJA))
+[Excalidraw Board](https://excalidraw.com/#json=hl7VSSElw_PHNQf9ZDzVP,vJwRB0rMn8QwcV8xCZvGJA)
 ![Class UML Diagram](https://github.com/user-attachments/assets/319e362d-0951-404e-b2a6-1aac35cfb541)
 
 ## Assumptions 
