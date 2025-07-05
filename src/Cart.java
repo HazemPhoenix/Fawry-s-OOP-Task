@@ -1,7 +1,4 @@
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.SimpleTimeZone;
 
 public class Cart {
     private ArrayList<CartItem> items;
@@ -28,7 +25,11 @@ public class Cart {
                 return;
             }
         }
-        System.out.println("Item not found");
+        throw new IllegalArgumentException("Item not found");
+    }
+
+    public ArrayList<CartItem> getItems() {
+        return items;
     }
 
     public void printItems() {
@@ -66,6 +67,7 @@ public class Cart {
         for (CartItem cartItem : this.items) {
             cartItem.printReceipt();
         }
+        System.out.println("-------------------");
         System.out.println("Order Subtotal: " + calculatePriceBeforeShipping() + "EGP");
         System.out.println("Shipping Fees: " + calculateShippingPrice() + "EGP");
         System.out.println("Total price: " + calculateTotalPrice() + "EGP");

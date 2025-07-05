@@ -11,30 +11,73 @@ public class EcommerceTester {
         Manufacturer vodafone = new Manufacturer("Vodafone", "Smart Village, Giza", Sector.Technology);
 
         LocalDate futureDate = LocalDate.now().plusMonths(1);
-        Biscuit b = new Biscuit("Oreo Biscuit 12 pieces", 85, 43, mondelez, futureDate, false, BiscuitFlavor.Vanilla);
+        Biscuit biscuit = new Biscuit("Oreo Biscuit 12 pieces", 85, 43, mondelez, futureDate, false, BiscuitFlavor.Vanilla);
 
         Cheese cheddarCheese = new CheddarCheese("Dina Farms Cheddar Cheese Spread", 84, 56, dinaFarms, futureDate, false, 0.275f);
         Cheese blueCheese = new BlueCheese("Dina Farms Blue Cheese", 100, 39, dinaFarms, futureDate, false, 0.275f);
         Cheese creamCheese = new CreamCheese("Dina Farms Cream Cheese Spread", 93, 32, dinaFarms, futureDate, false, 0.275f);
         Cheese mozzarellaCheese = new MozzarellaCheese("Dina Farms Mozzarella Cheese", 120, 45, dinaFarms, futureDate, false, 0.275f);
 
-        MobileScratchCard sc = new MobileScratchCard("Fakka Card", 26, 53, vodafone, false, 0.75f);
+        MobileScratchCard scratchCard = new MobileScratchCard("Fakka Card", 26, 53, vodafone, false, 0.75f);
 
         TV tv = new TV("Samsung 43 Inch TV Crystal Processor 4K LED", 14000d, 26, samsung, 43f, 8.1f);
 
         MobilePhone mobilePhone = new MobilePhone("Samsung Galaxy S25 Ultra AI Phone, 256GB Storage, 12GB RAM", 59700d, 21, samsung, 6.9f, 12, 256, 12f, 200f);
 
-        Cart cart = new Cart();
-        cart.addItem(sc, 5);
-        cart.addItem(tv, 1);
-        cart.addItem(mobilePhone, 1); // this throws an IllegalArgumentException because the quantity is more than what's available
-        cart.addItem(mozzarellaCheese, 3);
-        cart.printReceipt();
+
+        Store onlineMarket = new Store();
+
+        // The market is stocking the products
+        onlineMarket.useShippingService(new EgyptExpress()); // This is technically not needed as i already instantiate EgyptExepress in the default constructor
+        onlineMarket.addProduct(biscuit);
+        onlineMarket.addProduct(cheddarCheese);
+        onlineMarket.addProduct(blueCheese);
+        onlineMarket.addProduct(creamCheese);
+        onlineMarket.addProduct(mozzarellaCheese);
+        onlineMarket.addProduct(scratchCard);
+        onlineMarket.addProduct(tv);
+        onlineMarket.addProduct(mobilePhone);
+
+        onlineMarket.listAllProducts();
+
+        System.out.println("------------");
+
+        // a customer tries to buy some products
+        Customer hazem = new Customer("Hazem", "Maadi, Cairo", "01014656945", 100000, onlineMarket);
+//        hazem.getCart().addItem(mozzarellaCheese, 100); // Throws an IllegalArgumentException cause quantity is more than available
+        hazem.getCart().addItem(blueCheese, 3);
+        hazem.getCart().addItem(tv, 1);
+        hazem.getCart().addItem(mobilePhone, 1);
+//        hazem.getCart().addItem(mobilePhone, 1); // throws an IllegalStateException cause i have no sufficient funds
+        hazem.checkout();
+
+        System.out.println("------------");
+        // Product quantities are updated
+        onlineMarket.listAllProducts();
+
+
+
+
+
+
+
+
+
+
+
+
+
+//        Cart cart = new Cart();
+//        cart.addItem(sc, 5);
+//        cart.addItem(mozzarellaCheese, 3);
+//        cart.addItem(tv, 1);
+//        cart.addItem(biscuit, 2);
+//        cart.printReceipt();
+//        cart.removeItem(mobilePhone); // this throws an IllegalArgumentException because the item is not in the cart
+//        cart.addItem(mobilePhone, 50); // this throws an IllegalArgumentException because the quantity is more than what's available
 
         System.out.println("---------------");
 
-        cart.removeItem(tv);
-        cart.printReceipt();
 
 
 //        BiscuitFlavor bf = BiscuitFlavor.Chocolate;

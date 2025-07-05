@@ -18,7 +18,9 @@ public class CartItem {
     }
 
     public void setQuantity(int quantity) {
-        this.quantity = quantity;
+        if(quantity > 0) this.quantity = quantity;
+        else if(quantity < 0) new IllegalArgumentException("Quantity must be greater than 0");
+        else if (quantity > product.getQuantity()) throw new IllegalArgumentException("Quantity must be less than " + product.getQuantity());
     }
 
     public double getPriceBeforeShipping() {
