@@ -1,6 +1,6 @@
 # My Submission for the Fawry Full-Stack development OOP Task
 [Excalidraw Board](https://excalidraw.com/#json=Uz0wRatIUUAsdUkX0CVf7,djw0fC1h5mUmQ7oJDIr_DA)
-![Class UML Diagram](https://github.com/user-attachments/assets/319e362d-0951-404e-b2a6-1aac35cfb541)
+![Class UML Diagram](https://github.com/user-attachments/assets/6d9f8f46-7875-49de-b9d2-a7e08eaebfab)
 
 ## Assumptions 
 1. Product weights are in Kilogram.
