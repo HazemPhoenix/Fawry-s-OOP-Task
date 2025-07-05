@@ -1,3 +1,8 @@
+package Products.Electronics;
+
+import Manufacturer.Manufacturer;
+import Products.Product;
+
 public class MobilePhone extends Product {
     private float screenSizeInInches;
     private int RAM;

@@ -1,6 +1,11 @@
+package Products.Biscuit;
+
+import Manufacturer.Manufacturer;
+import Products.ExpirableProduct;
+
 import java.time.LocalDate;
 
-public class Biscuit extends ExpirableProduct  {
+public class Biscuit extends ExpirableProduct {
       private BiscuitFlavor flavor;
 
       public Biscuit(String name, double price, int quantity, Manufacturer manufacturer, LocalDate expiryDate, Boolean isExpired, BiscuitFlavor flavor) {

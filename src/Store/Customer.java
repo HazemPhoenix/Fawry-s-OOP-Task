@@ -1,4 +1,6 @@
-import java.util.ArrayList;
+package Store;
+
+import Cart.Cart;
 
 public class Customer {
     private String name;

@@ -1,3 +1,8 @@
+package Products.Electronics;
+
+import Manufacturer.Manufacturer;
+import Products.Product;
+
 public class MobileScratchCard extends Product {
     private Boolean isUsed;
     private float capacityInGB;

@@ -1,3 +1,7 @@
+package Cart;
+
+import Products.Product;
+
 import java.util.ArrayList;
 
 public class Cart {

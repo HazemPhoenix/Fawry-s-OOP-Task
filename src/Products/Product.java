@@ -1,3 +1,7 @@
+package Products;
+
+import Manufacturer.Manufacturer;
+
 public abstract class Product {
     private String name;
     private double price;

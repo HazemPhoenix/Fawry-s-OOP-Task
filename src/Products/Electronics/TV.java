@@ -1,3 +1,9 @@
+package Products.Electronics;
+
+import Manufacturer.Manufacturer;
+import Products.Product;
+import Shipping.Shippable;
+
 public class TV extends Product implements Shippable {
     private float screenSizeInInches;
     private double weight;

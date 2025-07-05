@@ -1,3 +1,13 @@
+package Store;
+
+import Cart.Cart;
+import Cart.CartItem;
+import Products.ExpirableProduct;
+import Products.Product;
+import Shipping.Shippable;
+import Shipping.EgyptExpress;
+import Shipping.ShippingService;
+
 import java.util.ArrayList;
 
 public class Store {
@@ -27,7 +37,7 @@ public class Store {
         if(this.products.contains(product)) {
             this.products.remove(product);
         } else {
-            throw new IllegalArgumentException("Product not in store");
+            throw new IllegalArgumentException("Products.Product not in store");
         }
     }
 
@@ -45,9 +55,9 @@ public class Store {
         ArrayList<CartItem> items = cart.getItems();
         for (CartItem item : items) {
             if(item.getProduct().getQuantity() < 0) {
-                throw new IllegalStateException("Product: " + item.getProduct().getName() + "is out of stock.");
+                throw new IllegalStateException("Products.Product: " + item.getProduct().getName() + "is out of stock.");
             } else if (item.getProduct() instanceof ExpirableProduct && (((ExpirableProduct) item.getProduct()).getIsExpired())) {
-                throw new IllegalStateException("Product: " + item.getProduct().getName() + "is expired.");
+                throw new IllegalStateException("Products.Product: " + item.getProduct().getName() + "is expired.");
             }
         }
     }

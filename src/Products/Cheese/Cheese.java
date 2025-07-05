@@ -1,3 +1,9 @@
+package Products.Cheese;
+
+import Manufacturer.Manufacturer;
+import Products.ExpirableProduct;
+import Shipping.Shippable;
+
 import java.time.LocalDate;
 
 public abstract class Cheese extends ExpirableProduct implements Shippable {

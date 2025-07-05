@@ -1,3 +1,14 @@
+import Products.Biscuit.Biscuit;
+import Products.Biscuit.BiscuitFlavor;
+import Products.Cheese.*;
+import Products.Electronics.MobilePhone;
+import Products.Electronics.MobileScratchCard;
+import Products.Electronics.TV;
+import Shipping.EgyptExpress;
+import Store.Customer;
+import Store.Store;
+import Manufacturer.*;
+
 import java.time.LocalDate;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -11,16 +22,16 @@ public class EcommerceTester {
         Manufacturer vodafone = new Manufacturer("Vodafone", "Smart Village, Giza", Sector.Technology);
 
         LocalDate futureDate = LocalDate.now().plusMonths(1);
-        Biscuit biscuit = new Biscuit("Oreo Biscuit 12 pieces", 85, 43, mondelez, futureDate, false, BiscuitFlavor.Vanilla);
+        Biscuit biscuit = new Biscuit("Oreo Products.Biscuit.Biscuit 12 pieces", 85, 43, mondelez, futureDate, false, BiscuitFlavor.Vanilla);
 
-        Cheese cheddarCheese = new CheddarCheese("Dina Farms Cheddar Cheese Spread", 84, 56, dinaFarms, futureDate, false, 0.275f);
-        Cheese blueCheese = new BlueCheese("Dina Farms Blue Cheese", 100, 39, dinaFarms, futureDate, false, 0.275f);
-        Cheese creamCheese = new CreamCheese("Dina Farms Cream Cheese Spread", 93, 32, dinaFarms, futureDate, false, 0.275f);
-        Cheese mozzarellaCheese = new MozzarellaCheese("Dina Farms Mozzarella Cheese", 120, 45, dinaFarms, futureDate, false, 0.275f);
+        Cheese cheddarCheese = new CheddarCheese("Dina Farms Cheddar Products.Cheese.Cheese Spread", 84, 56, dinaFarms, futureDate, false, 0.275f);
+        Cheese blueCheese = new BlueCheese("Dina Farms Blue Products.Cheese.Cheese", 100, 39, dinaFarms, futureDate, false, 0.275f);
+        Cheese creamCheese = new CreamCheese("Dina Farms Cream Products.Cheese.Cheese Spread", 93, 32, dinaFarms, futureDate, false, 0.275f);
+        Cheese mozzarellaCheese = new MozzarellaCheese("Dina Farms Mozzarella Products.Cheese.Cheese", 120, 45, dinaFarms, futureDate, false, 0.275f);
 
         MobileScratchCard scratchCard = new MobileScratchCard("Fakka Card", 26, 53, vodafone, false, 0.75f);
 
-        TV tv = new TV("Samsung 43 Inch TV Crystal Processor 4K LED", 14000d, 26, samsung, 43f, 8.1f);
+        TV tv = new TV("Samsung 43 Inch Products.Electronics.TV Crystal Processor 4K LED", 14000d, 26, samsung, 43f, 8.1f);
 
         MobilePhone mobilePhone = new MobilePhone("Samsung Galaxy S25 Ultra AI Phone, 256GB Storage, 12GB RAM", 59700d, 21, samsung, 6.9f, 12, 256, 12f, 200f);
 
@@ -52,7 +63,7 @@ public class EcommerceTester {
         hazem.checkout();
 
         System.out.println("------------");
-        // Product quantities are updated
+        // Products.Product quantities are updated
         onlineMarket.listAllProducts();
 
 
@@ -67,7 +78,7 @@ public class EcommerceTester {
 
 
 
-//        Cart cart = new Cart();
+//        Cart.Cart cart = new Cart.Cart();
 //        cart.addItem(sc, 5);
 //        cart.addItem(mozzarellaCheese, 3);
 //        cart.addItem(tv, 1);
@@ -80,9 +91,9 @@ public class EcommerceTester {
 
 
 
-//        BiscuitFlavor bf = BiscuitFlavor.Chocolate;
-//        BiscuitFlavor bf2 = BiscuitFlavor.Vanilla;
-//        BiscuitFlavor bf3 = BiscuitFlavor.Butter;
+//        Products.Biscuit.BiscuitFlavor bf = Products.Biscuit.BiscuitFlavor.Chocolate;
+//        Products.Biscuit.BiscuitFlavor bf2 = Products.Biscuit.BiscuitFlavor.Vanilla;
+//        Products.Biscuit.BiscuitFlavor bf3 = Products.Biscuit.BiscuitFlavor.Butter;
 //        System.out.println(bf);
 //        System.out.println(bf2);
 //        System.out.println(bf3);

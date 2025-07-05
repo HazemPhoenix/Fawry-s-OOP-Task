@@ -1,6 +1,9 @@
+package Shipping;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+
 
 public class EgyptExpress implements ShippingService {
     public void shipItems(ArrayList<Shippable> items) {

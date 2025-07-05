@@ -1,6 +1,10 @@
+package Products;
+
+import Manufacturer.Manufacturer;
+
 import java.time.LocalDate;
 
-public abstract class ExpirableProduct extends Product{
+public abstract class ExpirableProduct extends Product {
     private LocalDate expiryDate;
     private Boolean isExpired;
 

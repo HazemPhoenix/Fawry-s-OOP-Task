@@ -1,3 +1,8 @@
+package Cart;
+
+import Products.Product;
+import Shipping.Shippable;
+
 public class CartItem {
     private Product product;
     private int quantity;
